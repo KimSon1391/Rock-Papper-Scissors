@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e05f4e;
+}
+
+.game h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    color: #295f2d;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.title {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.game {
+    padding: 30px 50px;
+    background: white;
+    border-radius: 30px;
+}
+
+.game__item {
+    border: 3px solid #ffc83d;
+    background: white;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.game__player .game__item.active {
+    background: #ffc83d;
+}
+
+.game__player .game__item {
+    font-size: 40px;
+    width: 80px;
+    height: 80px;
+    margin: 0 30px;
+}
+
+.game__player .game__item:hover {
+    background: #ffc83d;
+    transition: 0.4s;
+}
+
+.game__player .game__item.active {
+    background: #ffc83d;
+}
+
+.game__wrap {
+    margin-bottom: 20px;
+}
+
+.game__computer button {
+    font-size: 100px;
+    padding: 30px;
+    background: white;
+    border: 0;
+}
+
+.notification {
+    display: block;
+    padding: 20px 0;
+    width: 500px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #ffc83d;
+    background-color: #295f2d;
+    text-transform: uppercase;
+    margin: 25px auto;
+    position: relative;
+}
+
+.notification::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-top: 32px solid transparent;
+    border-bottom: 32px solid transparent;
+    border-left: 32px solid white;
+    border-right: 0;
+}
+.notification::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-top: 32px solid transparent;
+    border-bottom: 32px solid transparent;
+    border-right: 32px solid white;
+    border-left: 0;
+}
+
+.btn {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 25px;
+    margin-top: 20px;
+    background: #ffc83d;
+    color: white;
+    border: 2px solid #ffc83d;
+    transition: 0.4s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.btn.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.btn:hover {
+    background: white;
+    color: #ffc83d;
+    transition: 0.4s;
+}
